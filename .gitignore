@@ -9,3 +9,7 @@
 /x64/Debug
 /.vs/dirdiff/v14
 /dirdiff.VC.db
+/Debug
+*.user
+/dirdiff/Debug
+*.log

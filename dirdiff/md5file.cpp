@@ -1,12 +1,14 @@
 #include "md5file.h"
 #include "md5global.h"
 #include "md5.h"
+#include "log.h"
 
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <memory>
 #include <iomanip>
+#include <exception>
 
 std::string getFileMD5(const std::string& filename)
 {
@@ -22,9 +24,11 @@ std::string getFileMD5(const std::string& filename)
 		fin.read(reinterpret_cast<char*>(buffer.get()), length);
 		if (!fin)
 		{
-			std::cout << filename << " can't be read" << std::endl;
+			LOG(filename << " can't be read");
 			fin.close();
-			return "";
+			std::ostringstream oss;
+			oss << "FATAL ERROR: " << filename << " can't be read" << std::ends;
+			throw std::runtime_error(oss.str());
 		}
 		fin.close();
 
@@ -45,7 +49,9 @@ std::string getFileMD5(const std::string& filename)
 	}
 	else
 	{
-		std::cout << filename << " can't be opened" << std::endl;
-		return "";
+		LOG(filename << " can't be opened");
+		std::ostringstream oss;
+		oss << "FATAL ERROR: " << filename << " can't be opened" << std::ends;
+		throw std::runtime_error(oss.str());
 	}
 }

@@ -151,6 +151,7 @@
     <ClCompile Include="md5file.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="log.h" />
     <ClInclude Include="md5global.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="md5file.h" />
