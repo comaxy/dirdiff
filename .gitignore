@@ -3,3 +3,9 @@
 ################################################################################
 
 /dirdiff.VC.VC.opendb
+/dirdiff/x64/Debug/dirdiff.tlog
+/dirdiff/x64/Debug/dirdiff.log
+/dirdiff/x64/Debug
+/x64/Debug
+/.vs/dirdiff/v14
+/dirdiff.VC.db
