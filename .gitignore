@@ -13,3 +13,5 @@
 *.user
 /dirdiff/Debug
 *.log
+/dirdiff/Release
+/Release
