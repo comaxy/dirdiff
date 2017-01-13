@@ -51,7 +51,7 @@ int main(int argc, char** argv)
 		// Init log
 		CTime curTime = CTime::GetCurrentTime();
 		CStringA str = curTime.Format(TEXT("%Y%m%d%H%M%S"));
-		str = "update" + str + ".log";
+		str = "dirdiff" + str + ".log";
 		logFile = static_cast<LPCSTR>(str);
 
 		// get directories from command line.
